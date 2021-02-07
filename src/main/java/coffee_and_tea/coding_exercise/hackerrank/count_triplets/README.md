@@ -1,19 +1,20 @@
-# Coding Challenge: Sherlock and Anagrams
+# Coding Challenge: Count Triplets
                    
 ## Source of challenge: hankerrank
-link: https://www.hackerrank.com/challenges/sherlock-and-anagrams/problem
+link: https://www.hackerrank.com/challenges/count-triplets-1/problem
 
 ### Solution discussion
-Assuming a string length of n, we need to check from 1 to n - 1 of anagrams of substrings.
-For substring length of i, need to check anagrams among substring from (1, 1+i) ... (m, m+i) ...
-note: above substring both ends are inclusive. 
+For a triplet (i, j, k) where i < j < k in and array(i) * r = array(j)
+and array(j) * r = array(k).
 
-The way to check anagram is to sort the string's characters, then compare.
-Sorting one substring is complexity of O(mlogm) m is size of substring.
+My initial solution would be a O(n**3) for array size of n. 
 
-There's n-m of substrings to sort for substrings length of m, O((n-m)*m*logm)
-Needs to perform check for size m from 1 to n - 1 which is O(n*1*log1)...O(1*(n-1)*log(n-1))
-Overall complexity: (n*n*nlogn)
+The improved version bring down to O(n) with auxiliary space complexity of O(n);
+which uses 2 hash map, one to store the number of i where array(i) * r = array(j)
+and one to store the number j where array(j) * r = array(k)
 
-Another note, saw an algorithm using sum hash of each character in string to determine anagram, smarter way to do it.
+For each i, we first update j's counts, for each j met array(i) * r = array(j), 
+this gives the number of possible i to build the triplet.
 
+Then for the i, if there's already information on to build a triplet with i stored in hash map,
+we can add it to the result.  
