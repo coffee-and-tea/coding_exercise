@@ -38,4 +38,4 @@ Reduce the path to root when discover the root.
 | Simple Union Find                          | O(N)                    | O(1)                       |
 | Quick Union Find                           | O(N)                    | O(N)                       |
 | Weighted Quick Union Find                  | O(logN)                 | O(logN)                    |
-| Weighted Quick Union Find with Compression | O(logN) close to linear | O(logN) close to linear |
+| Weighted Quick Union Find with Compression | O(logN) close to linear | O(logN) close to linear    |
