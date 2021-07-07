@@ -13,10 +13,11 @@ public class QueueImplWithLinkedList<T> implements Queue<T>{
         Node oldLast = last;
         last = new Node();
         last.value = t;
-        oldLast.nextNode = last;
 
-        if(first == null) {
-            first = oldLast;
+        if(oldLast != null) {
+            oldLast.nextNode = last;
+        } else {
+            first = last;
         }
     }
 
