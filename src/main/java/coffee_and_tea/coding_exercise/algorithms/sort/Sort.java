@@ -1,6 +1,6 @@
 package coffee_and_tea.coding_exercise.algorithms.sort;
 
-interface Sort {
+public interface Sort {
     void sort(Comparable[] items);
 
     static boolean less(Comparable[] items, int i, int j){

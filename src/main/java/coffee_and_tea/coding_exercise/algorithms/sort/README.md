@@ -23,6 +23,8 @@ Auxiliary space is require of size n.
 Random shuffle(critical for performance), then sort by pick a partition element, place all element less on one side, greater on the other. 
 Then continue sort 2 sides with by picking random partition element.
 
+Also 3 way quick sort by considering duplicate elements.
+
 ## Shuffle
 Shuffle array by shuffle for each position i, randomly pick item between 0 and i, swap with item at i+1.
 Helpful for testing sorts.
