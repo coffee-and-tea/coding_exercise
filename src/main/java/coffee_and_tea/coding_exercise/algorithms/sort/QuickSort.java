@@ -7,9 +7,27 @@ public class QuickSort implements Sort {
         Shuffle shuffle = new ShuffleImpl();
         shuffle.shuffle(items);
 
-        sort(items, 0, items.length - 1);
+        sort3WayPartition(items, 0, items.length - 1);
     }
 
+    /* 3 way partition considering duplicate entries */
+    private void sort3WayPartition(Comparable[] items, int lo, int hi) {
+        if(hi <= lo) return;
+        int lt = lo, gt = hi;
+        Comparable v = items[lo];
+        int i = lo;
+        while(i <= gt) {
+            int cmp = items[i].compareTo(v);
+            if(cmp < 0) Sort.exchange(items, lt++, i++);
+            else if (cmp > 0) Sort.exchange(items, i, gt--);
+            else i++;
+        }
+
+        sort(items, lo, lt - 1);
+        sort(items, gt + 1, hi);
+    }
+
+    /* traditional quicksort */
     private void sort(Comparable[] items, int lo, int hi) {
         if(hi <= lo) return;
         int j = partition(items, lo, hi);
