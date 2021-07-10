@@ -25,6 +25,10 @@ Then continue sort 2 sides with by picking random partition element.
 
 Also 3 way quick sort by considering duplicate elements.
 
+## Heap Sort
+Sort by build binary heap in place then pop largest entry place in the end of the array.
+Not widely used due to not cache friendly(access array not sequential), and inner loop more complexes.
+
 ## Shuffle
 Shuffle array by shuffle for each position i, randomly pick item between 0 and i, swap with item at i+1.
 Helpful for testing sorts.
@@ -38,3 +42,4 @@ Helpful for testing sorts.
 | Shell sort        |  O(n**(3/2)) for h = 3*h + 1 model | Not stable |
 | Merge sort        |  O(n*logn) | Stable     |
 | Quick sort        |  O(n**2) worst case when partition does not divide array, mostly O(nlogn) | Not stable |
+| Heap sort         |  O(n*logn) | Not stable |

@@ -8,6 +8,8 @@ public class MaxPriorityQueueImplWithBinaryHeap<T extends Comparable<T>> impleme
     private Comparable[] heap = new Comparable[capacity];
     private int lastIdx = 0;
 
+
+
     @Override
     public void insert(T t) {
         if (lastIdx == capacity) {
@@ -19,6 +21,12 @@ public class MaxPriorityQueueImplWithBinaryHeap<T extends Comparable<T>> impleme
         swim(lastIdx++);
     }
 
+    public static void swimOne(Comparable[] items, int i) {
+        if (parent(i) >= 0 && Sort.less(items, parent(i), i)) {
+            Sort.exchange(items, parent(i), i);
+        }
+    }
+
     private void swim(int i) {
         while (parent(i) >= 0 && Sort.less(heap, parent(i), i)) {
             Sort.exchange(heap, parent(i), i);
@@ -26,15 +34,15 @@ public class MaxPriorityQueueImplWithBinaryHeap<T extends Comparable<T>> impleme
         }
     }
 
-    private int parent(int i) {
+    private static int parent(int i) {
         return (i - 1) / 2;
     }
 
-    private int leftChild(int i) {
+    private static int leftChild(int i) {
         return 2 * (i + 1) - 1;
     }
 
-    private int rightChild(int i) {
+    private static int rightChild(int i) {
         return 2 * (i + 1);
     }
 
@@ -65,8 +73,8 @@ public class MaxPriorityQueueImplWithBinaryHeap<T extends Comparable<T>> impleme
 
         if(Sort.less(heap, i, max)) {
             Sort.exchange(heap, i, max);
+            sink(max);
         }
-        sink(max);
     }
 
     @Override
