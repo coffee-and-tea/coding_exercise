@@ -12,3 +12,13 @@ Simple implementation to use linked list to store key/value pairs.
 
 ### Binary Search Tree implementation
 Using binary search tree, an order map can be implemented.
+
+
+## Complexity of Operations
+
+| Implementation | |     worst-case  | | |       average case        | | 
+| -------------- | ------ | ------ | ------ | ------ | ------ | ------ |
+|                                   | Search | Insert | Delete | Search | Insert | Delete |
+| Linked list(unordered list)       | N      | N      | N      |  N/2   |  N     | N/2    |
+| Binary search tree(ordered list)  | lgN    | N      | N      |  lgN   |  N/2   | N/2    |
+|

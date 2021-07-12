@@ -11,4 +11,5 @@ public interface OrderMap<Key extends Comparable<Key>, Value> extends Map<Key, V
     void deleteMax();
     int size(Key lo, Key hi);
     Iterable<Key> keys(Key lo, Key hi);
+    void print();
 }
