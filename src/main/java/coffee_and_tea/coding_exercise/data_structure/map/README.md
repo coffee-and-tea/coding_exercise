@@ -20,6 +20,14 @@ Red-black tree is a version of 2-3 tree.
 ### B-tree
 Like 2-3 tree but have a very large number of values stored in a node.
 
+### Hash with Separate chaining
+Hash the key and use linked list to chain same hash values.
+Use a fix size table to store keys, size is smaller than number of keys.
+
+### Hash with linear probing
+Hash the key, store in table, where table size is much larger than number of keys.
+Same hash just look for next empty position to put key.
+
 ## Complexity of Operations
 
 | Implementation | |     worst-case  | | |       average case        | | 
@@ -28,3 +36,5 @@ Like 2-3 tree but have a very large number of values stored in a node.
 | Linked list(unordered list)       | N      | N      | N      |  N/2   |  N     | N/2    |
 | Binary search tree(ordered list)  | lgN    | N      | N      |  lgN   |  N/2   | N/2    |
 | 2-3 tree                          | ~lgN   | ~lgN   | ~lgN   | ~lgN   | ~lgN   | ~lgN   |
+| Hash with Separate chaining       | lgN    | lgN    | lgN    |  3-5   |  3-5   |  3-5   | 
+| Hash with linear probe            | lgN    | lgN    | lgN    |  3-5   |  3-5   |  3-5   | 
