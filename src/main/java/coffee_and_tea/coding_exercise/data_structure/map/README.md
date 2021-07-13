@@ -13,6 +13,12 @@ Simple implementation to use linked list to store key/value pairs.
 ### Binary Search Tree implementation
 Using binary search tree, an order map can be implemented.
 
+### 2-3 tree
+Node can have 2 values, and child organized as less, middle and greater.
+Red-black tree is a version of 2-3 tree.
+
+### B-tree
+Like 2-3 tree but have a very large number of values stored in a node.
 
 ## Complexity of Operations
 
@@ -21,4 +27,4 @@ Using binary search tree, an order map can be implemented.
 |                                   | Search | Insert | Delete | Search | Insert | Delete |
 | Linked list(unordered list)       | N      | N      | N      |  N/2   |  N     | N/2    |
 | Binary search tree(ordered list)  | lgN    | N      | N      |  lgN   |  N/2   | N/2    |
-|
+| 2-3 tree                          | ~lgN   | ~lgN   | ~lgN   | ~lgN   | ~lgN   | ~lgN   |
