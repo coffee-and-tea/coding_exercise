@@ -1,4 +1,4 @@
-package coffee_and_tea.coding_exercise.algorithms.union_find;
+package coffee_and_tea.coding_exercise.algorithms.graphs.union_find;
 
 public class SimpleUnionFind extends UnionFind {
 
