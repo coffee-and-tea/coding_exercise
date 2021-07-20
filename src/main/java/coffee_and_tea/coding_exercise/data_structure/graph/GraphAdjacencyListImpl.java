@@ -3,7 +3,7 @@ package coffee_and_tea.coding_exercise.data_structure.graph;
 import java.util.HashSet;
 import java.util.Set;
 
-public class GraphAdjacencyListImpl extends Graph{
+public class GraphAdjacencyListImpl implements Graph{
 
     private Set<Integer>[] adj;
     private int V;
